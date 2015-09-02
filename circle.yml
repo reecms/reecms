@@ -5,3 +5,9 @@ dependencies:
   post:
     - cp ~/reecms/.env.example ~/reecms/.env
     - php ~/reecms/artisan key:generate
+    
+deployment:
+  dev:
+    branch: master
+    heroku:
+      appname: infinite-dawn-1227

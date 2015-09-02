@@ -2,7 +2,6 @@ machine:
   php:
     version: 5.6.5
 dependencies:
-  pre:
-    - composer install --prefer-source --no-interaction
+  post:
     - cp ~/reecms/.env.example ~/reecms/.env
     - php ~/reecms/artisan key:generate

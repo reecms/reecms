@@ -129,6 +129,7 @@ return [
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -185,5 +186,7 @@ return [
         'Taki'      => HieuLe\Taki\TakiFacade::class,
         'Active'    => HieuLe\Active\Facades\Active::class,
         'Alert'     => HieuLe\Alert\Facades\Alert::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Form'      => Collective\Html\FormFacade::class,
     ],
 ];

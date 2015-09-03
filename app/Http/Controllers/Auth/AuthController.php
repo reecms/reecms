@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Ree\Http\Controllers\Auth;
 
-use App\User;
+use Ree\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Ree\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

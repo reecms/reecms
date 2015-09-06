@@ -5,7 +5,7 @@ machine:
 dependencies:
   pre:
     - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
-    - pecl install mongo
+    - printf "\n" | pecl install mongo
   post:
     - cp ~/reecms/.env.example ~/reecms/.env
     - php ~/reecms/artisan key:generate

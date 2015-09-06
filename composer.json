@@ -13,13 +13,14 @@
         "barryvdh/laravel-ide-helper": "^2.1",
         "hieu-le/active": "^2.2",
         "hieu-le/laravel-alert": "^2.1",
-        "laravelcollective/html": "^5.1"
+        "laravelcollective/html": "^5.1",
+        "teepluss/theme": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1"
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
         "classmap": [
@@ -31,7 +32,8 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/TestCase.php"
+            "tests/TestCase.php",
+            "tests/IntegrationTestCase.php"
         ]
     },
     "scripts": {
@@ -43,6 +45,7 @@
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
+            "php artisan ide-helper:generate",
             "php artisan optimize"
         ],
         "post-root-package-install": [

@@ -11,16 +11,40 @@
          syntaxCheck="false">
     <testsuites>
         <testsuite name="Application Test Suite">
-            <directory>./tests/</directory>
+            <directory>./tests/unit/</directory>
+            <directory>./tests/integration/</directory>
+            <directory>./tests/functional/</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory suffix=".php">app/</directory>
+            <exclude>
+                <file>app/Console/Commands/Inspire.php</file>
+                <file>app/Console/Kernel.php</file>
+                <file>app/Events/Event.php</file>
+                <file>app/Exceptions/Handler.php</file>
+                <file>app/Http/Controllers/Auth/AuthController.php</file>
+                <file>app/Http/Controllers/Auth/PasswordController.php</file>
+                <file>app/Http/Controllers/Controller.php</file>
+                <file>app/Http/Kernel.php</file>
+                <file>app/Http/Middleware/Authenticate.php</file>
+                <file>app/Http/Middleware/EncryptCookies.php</file>
+                <file>app/Http/Middleware/RedirectIfAuthenticated.php</file>
+                <file>app/Http/Middleware/VerifyCsrfToken.php</file>
+                <file>app/Http/Requests/Request.php</file>
+                <file>app/Http/routes.php</file>
+                <file>app/Jobs/Job.php</file>
+                <file>app/Providers/AppServiceProvider.php</file>
+                <file>app/Providers/AuthServiceProvider.php</file>
+                <file>app/Providers/EventServiceProvider.php</file>
+                <file>app/Providers/RouteServiceProvider.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="DB_CONNECTION" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>

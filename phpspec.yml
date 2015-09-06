@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: Ree
-        psr4_prefix: Ree
-        src_path: app

@@ -12,6 +12,13 @@ use Ree\Models\User;
 class UserIntegrationTest extends IntegrationTestCase
 {
 
+    /**
+     * Given: a new user with a raw password
+     * 
+     * When : we save that user into database
+     * 
+     * Then : his/her password is hashed correctly before being saved
+     */
     public function testPasswordIsHashedBeforeSaved()
     {
         /* @var $user User */

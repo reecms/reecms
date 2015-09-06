@@ -35,16 +35,21 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         parent::boot();
 
-        static::updating(function (User $user) {
-            
+        static::saving(function (User $user) {
+            if ($user->isDirty('password')) {
+                $user->attributes['password'] = \Hash::make(array_get($user->attributes, 'password'));
+            }
         });
     }
 
     /**
      * Get the user avatar image url
+     * 
+     * @return string
      */
     public function getAvatarUrl()
     {
-        
+        $hash = md5(strtolower($this->email));
+        return "http://www.gravatar.com/avatar/{$hash}";
     }
 }

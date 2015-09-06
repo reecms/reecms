@@ -12,9 +12,9 @@ dependencies:
     
 test:
   override:
-    - phpunit --coverage-clover build/logs/clover.xml
+    - phpunit --coverage-clover=coverage.xml
   post:
-    - ./vendor/bin/test-reporter
+    - bash <(curl -s https://codecov.io/bash)
     
 deployment:
   dev:

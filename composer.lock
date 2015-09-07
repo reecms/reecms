@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9761f5216b5d006e38dd5f416978d9ae",
+    "hash": "914456cbfa1eeb9c6e4577859966eba3",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -3427,12 +3427,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reecms/testbench.git",
-                "reference": "77946ceb74898c44cfbea6e475b9c5362d518142"
+                "reference": "e2cf41189ac31835dbc22a0b278f7c9a02107c32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reecms/testbench/zipball/77946ceb74898c44cfbea6e475b9c5362d518142",
-                "reference": "77946ceb74898c44cfbea6e475b9c5362d518142",
+                "url": "https://api.github.com/repos/reecms/testbench/zipball/e2cf41189ac31835dbc22a0b278f7c9a02107c32",
+                "reference": "e2cf41189ac31835dbc22a0b278f7c9a02107c32",
                 "shasum": ""
             },
             "require": {
@@ -3460,7 +3460,7 @@
                 "reecms",
                 "testing"
             ],
-            "time": "2015-09-07 17:49:36"
+            "time": "2015-09-07 18:47:57"
         },
         {
             "name": "sebastian/comparator",

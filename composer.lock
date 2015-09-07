@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41fcb48cab4a474049581c10d395fc79",
-    "content-hash": "e1081a697e6212c1f1b9bdc80913c340",
+    "hash": "502b8bca0f2b8ef19e314003403983f0",
+    "content-hash": "0e2dc2add41299b22e7dc23ef1c7d12b",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -3350,6 +3350,47 @@
             "time": "2015-08-19 09:14:08"
         },
         {
+            "name": "reecms/testbench",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reecms/testbench.git",
+                "reference": "e2cf41189ac31835dbc22a0b278f7c9a02107c32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reecms/testbench/zipball/e2cf41189ac31835dbc22a0b278f7c9a02107c32",
+                "reference": "e2cf41189ac31835dbc22a0b278f7c9a02107c32",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ree\\Testbench\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Hieu Le",
+                    "email": "letrunghieu.cse09@gmail.com",
+                    "homepage": "http://www.hieule.info"
+                }
+            ],
+            "description": "Some utilities to test ReeCMS",
+            "keywords": [
+                "reecms",
+                "testing"
+            ],
+            "time": "2015-09-07 18:47:57"
+        },
+        {
             "name": "sebastian/comparator",
             "version": "1.2.0",
             "source": {
@@ -3773,7 +3814,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "reecms/theme": 20
+        "reecms/theme": 20,
+        "reecms/testbench": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

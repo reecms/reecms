@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "name": "reecms/reecms",
+    "description": "The ReeCMS.",
+    "keywords": ["cms", "reecms"],
+    "license": "Apache-2.0",
     "type": "project",
     "require": {
         "php": ">=5.5.9",
@@ -19,7 +19,8 @@
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~4.0",
+        "reecms/testbench": "dev-master"
     },
     "autoload": {
         "classmap": [

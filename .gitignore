@@ -4,4 +4,7 @@ Homestead.yaml
 Homestead.json
 .env
 /nbproject/private/
+/.idea/
+/public/build
+/public/theme
 _ide_helper.php

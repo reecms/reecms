@@ -138,6 +138,7 @@ return [
         Ree\Providers\AuthServiceProvider::class,
         Ree\Providers\EventServiceProvider::class,
         Ree\Providers\RouteServiceProvider::class,
+        Ree\Providers\CocktailServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

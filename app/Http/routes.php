@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('sign-up', ['as' => 'auth.sign_up', 'uses' => 'AuthenticationController@getSignUp']);
+});

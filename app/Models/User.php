@@ -52,4 +52,22 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         $hash = md5(strtolower($this->email));
         return "http://www.gravatar.com/avatar/{$hash}";
     }
+
+    /**
+     * Get all question of this user
+     *
+     * @return array
+     */
+    public function questions() {
+        return $this->hasMany('Question');
+    }
+
+    /**
+     * Get all answers of this user
+     *
+     * @return array
+     */
+    public function answers() {
+        return $this->hasMany('Answer');
+    }
 }

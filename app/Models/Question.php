@@ -6,13 +6,15 @@ use Jenssegers\Mongodb\Model;
 
 class Question extends Model
 {
+    
+    protected $fillable = ['title', 'content', 'owner', 'voteUps', 'voteDowns', 'answers', 'comments'];
     /**
      * Return owner of this question 
      * 
      * @return  User
      */
     public function owner() {
-        return $this->belongsTo('User');
+        return $this->belongsTo('Ree\Models\User')->first();
     }
     
     /**
@@ -22,11 +24,14 @@ class Question extends Model
      * @return array
      */
     public function pushAnswer($answer) {
-        if (!$this->answers) {
-            $this->answers = [];
+        if ($answer->_id)
+        {
+            return false;
         }
-        $this->answers[]  = $answer;
-        return $answer;
+        else
+        {
+            $this->answers()->save($answer);   
+        }
     }
     
     /**
@@ -36,11 +41,14 @@ class Question extends Model
      * @return array
      */
     public function pushComment($comment) {
-        if (!$this->comments) {
-            $this->comments = [];
+        if ($comment->_id)
+        {
+            return false;
         }
-        $this->comments[] = $comment;
-        return $comment;
+        else
+        {
+            $this->answers()->save($comment);   
+        }
     }
     
     /**
@@ -49,7 +57,7 @@ class Question extends Model
      * @return array
      */
     public function comments() {
-        return $this->embedsMany('Comment');
+        return $this->embedsMany('Ree\Models\Comment');
     }
     
     /**
@@ -58,7 +66,7 @@ class Question extends Model
      * @return array
      */
     public function answers() {
-        return $this->embedsMany('Answer');
+        return $this->embedsMany('Ree\Models\Answer');
     }
     
     /**

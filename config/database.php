@@ -77,15 +77,10 @@ return [
             'prefix' => '',
         ],
         'testing' => array(
-            'driver'   => 'mongodb',
-            'host'     => env('DB_HOST', 'ds041603.mongolab.com'),
-            'port'     => env('DB_PORT', 41603),
-            'database' => env('DB_DATABASE', 'reecms'),
-            'username' => env('DB_USERNAME', 'reecms'),
-            'password' => env('DB_PASSWORD', 'reecms'),
-            'options' => array(
-                'db' => env('DB_OPTIONS_DB', 'reecms')
-            )
+            'driver' => 'mongodb',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE', 'test')
         ),
         'mongodb' => array(
             'driver'   => 'mongodb',

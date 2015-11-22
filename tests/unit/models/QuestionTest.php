@@ -27,47 +27,34 @@ class QuestionTest extends TestCase
         $question->first()->delete();
         $this->assertEquals(Question::count(), $count);
     }
-
-    public function testOwner()
-    {
-        $owner = factory(User::class)->make();
-        $owner->email = 'ezral@lol.com';
-        $owner->save();
-        $question = new Question();
-        $question->title = 'Test owner';
-        $question->owner_id = $owner->_id;
-        $question->save();
-        $qId = $question->_id;
-        $this->assertEquals('ezral@lol.com', Question::find($qId)->owner()->email);
-        
-    }
     
     public function testAnswers()
     {
+        $question = new Question();
+        $question->title = 'New question';
+        $question->save();
         $anwser = new Answer();
         $anwser->content = 'You should do that not do this!!!!!!';
-        $question = Question::first();
         $question->answers()->save($anwser);
-        $question->save();
-        $this->assertEquals($anwser->content, Question::first()->answers()->first()->content);
+        $this->assertEquals($anwser->content, $question->answers()->first()->content);
         $anwser2 = new Answer();
         $anwser2->content = '222 You should do that not do this!!!!!!';
         $question->answers()->save($anwser2);
-        $this->assertEquals(2, Question::first()->answers()->count());
+        $this->assertEquals(2, $question->answers()->count());
     }
     
     public function testPushAnser()
     {
         $anwser = new Answer();
         $anwser->content = 'You should do that not do this!!!!!!';
-        $question = Question::first();
+        $question = new Question();
         $question->answers()->delete();
-        $question->pushAnswer($anwser);
         $question->save();
-        $this->assertEquals($anwser->content, Question::first()->answers()->first()->content);
+        $question->pushAnswer($anwser);
+        $this->assertEquals($anwser->content, $question->answers()->first()->content);
         $anwser2 = new Answer();
         $anwser2->content = '222 You should do that not do this!!!!!!';
         $question->pushAnswer($anwser2);
-        $this->assertEquals(2, Question::first()->answers()->count());
+        $this->assertEquals(2, $question->answers()->count());
     }
 }

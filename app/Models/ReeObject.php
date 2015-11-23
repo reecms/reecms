@@ -49,4 +49,29 @@ class ReeObject extends Model
         $votes = json_decode($this->{$vote_type}, true);
         return User::whereIn('_id', $votes);
     }
+    /**
+     * Push a comment to this question
+     * 
+     * @param Comment $comment
+     * @return array
+     */
+    public function pushComment($comment) {
+        if ($comment->_id)
+        {
+            return false;
+        }
+        else
+        {
+            $this->answers()->save($comment);   
+        }
+    }
+    
+    /**
+     * Get all comments of this question
+     * 
+     * @return array
+     */
+    public function comments() {
+        return $this->embedsMany('Ree\Models\Comment');
+    }
 }

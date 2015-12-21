@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'auth'], function () {
     Route::get('sign-up', ['as' => 'auth.sign_up', 'uses' => 'AuthenticationController@getSignUp']);
+    Route::post('sign-up', ['as' => 'auth.sign_up.post', 'uses' => 'AuthenticationController@postRegister']);
 });
+

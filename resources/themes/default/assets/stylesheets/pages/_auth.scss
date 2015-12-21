@@ -1,0 +1,8 @@
+.auth-box {
+  margin: 1em auto;
+  width: $auth-box-width;
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+}

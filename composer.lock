@@ -4,9 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "502b8bca0f2b8ef19e314003403983f0",
-    "content-hash": "0e2dc2add41299b22e7dc23ef1c7d12b",
+    "hash": "aa5345b1fac8ec0b17b503c310f91248",
+    "content-hash": "a3789e73165be1cb832342c7bfca1784",
     "packages": [
+        {
+            "name": "artesaos/seotools",
+            "version": "v0.7.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artesaos/seotools.git",
+                "reference": "50a02e9d46aabb7fad741ea5a9dee5dfb1478e23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artesaos/seotools/zipball/50a02e9d46aabb7fad741ea5a9dee5dfb1478e23",
+                "reference": "50a02e9d46aabb7fad741ea5a9dee5dfb1478e23",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5",
+                "illuminate/support": "~5",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.1.x",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Artesaos\\SEOTools\\": "src/SEOTools/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vinicius",
+                    "email": "luiz.vinicius73@gmail.com"
+                }
+            ],
+            "description": "SEO Tools for Laravel and Lumen",
+            "keywords": [
+                "laravel5",
+                "lumen",
+                "metatags",
+                "opengraph",
+                "seo",
+                "seotools",
+                "webmaster"
+            ],
+            "time": "2015-09-14 10:17:46"
+        },
         {
             "name": "barryvdh/laravel-debugbar",
             "version": "v2.0.6",

@@ -17,7 +17,8 @@ return [
          * Is the `username` field required when registering new account?
          */
         'required'  => false,
-        /**
+
+        /*
          * Validate a username
          */
         'validator' => 'required|min:3|max:50',
@@ -34,7 +35,7 @@ return [
      * email do not need to verified, they will be logged in right after
      * registered.
      */
-    'confirm_after_created' => false,
+    'confirm_after_created' => true,
     'field'                 => [
 
         /*

@@ -12,7 +12,7 @@ return [
       |
      */
 
-    'fetch' => PDO::FETCH_CLASS,
+    'fetch'       => PDO::FETCH_CLASS,
     /*
       |--------------------------------------------------------------------------
       | Default Database Connection Name
@@ -23,7 +23,7 @@ return [
       | you may use many connections at once using the Database library.
       |
      */
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default'     => env('DB_CONNECTION', 'mongodb'),
     /*
       |--------------------------------------------------------------------------
       | Database Connections
@@ -41,47 +41,53 @@ return [
      */
     'connections' => [
 
-        'sqlite' => [
-            'driver' => 'sqlite',
+        'sqlite'  => [
+            'driver'   => 'sqlite',
             'database' => storage_path('database.sqlite'),
-            'prefix' => '',
+            'prefix'   => '',
         ],
-        'mysql' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
+        'mysql'   => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', 'localhost'),
+            'database'  => env('DB_DATABASE', 'forge'),
+            'username'  => env('DB_USERNAME', 'forge'),
+            'password'  => env('DB_PASSWORD', ''),
+            'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-            'strict' => false,
+            'prefix'    => '',
+            'strict'    => false,
         ],
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'localhost'),
+        'pgsql'   => [
+            'driver'   => 'pgsql',
+            'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
         ],
-        'sqlsrv' => [
-            'driver' => 'sqlsrv',
-            'host' => env('DB_HOST', 'localhost'),
+        'sqlsrv'  => [
+            'driver'   => 'sqlsrv',
+            'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
+            'charset'  => 'utf8',
+            'prefix'   => '',
         ],
-        'testing' => array(
-            'driver' => 'mongodb',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'test'),
-        ),
+        'testing' => [
+            'driver'   => 'mongodb',
+            'host'     => 'localhost',
+            'port'     => 27017,
+            'database' => 'test',
+        ],
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            'host'     => env('DB_HOST', 'localhost'),
+            'port'     => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE', 'ree-cms'),
+        ],
     ],
     /*
       |--------------------------------------------------------------------------
@@ -93,7 +99,7 @@ return [
       | the migrations on disk haven't actually been run in the database.
       |
      */
-    'migrations' => 'migrations',
+    'migrations'  => 'migrations',
     /*
       |--------------------------------------------------------------------------
       | Redis Databases
@@ -104,12 +110,12 @@ return [
       | such as APC or Memcached. Laravel makes it easy to dig right in.
       |
      */
-    'redis' => [
+    'redis'       => [
 
         'cluster' => false,
         'default' => [
-            'host' => '127.0.0.1',
-            'port' => 6379,
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
             'database' => 0,
         ],
     ],

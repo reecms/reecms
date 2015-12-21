@@ -14,7 +14,8 @@
         "hieu-le/active": "^2.2",
         "hieu-le/laravel-alert": "^2.1",
         "laravelcollective/html": "^5.1",
-        "reecms/theme": "dev-master"
+        "reecms/theme": "dev-master",
+        "artesaos/seotools": "v0.7.3.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

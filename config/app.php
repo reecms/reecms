@@ -131,6 +131,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -190,5 +191,6 @@ return [
         'Alert'     => HieuLe\Alert\Facades\Alert::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Form'      => Collective\Html\FormFacade::class,
+        'SEO'       => Artesaos\SEOTools\Facades\SEOTools::class,
     ],
 ];
